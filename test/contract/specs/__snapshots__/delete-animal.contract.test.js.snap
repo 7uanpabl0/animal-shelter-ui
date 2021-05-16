@@ -7,3 +7,11 @@ Array [
   },
 ]
 `;
+
+exports[`Given an animal service When an animal is requested to be removed It should then return a confirmation message about the deleted animal 1`] = `
+Array [
+  Object {
+    "message": "Animal deleted successfully",
+  },
+]
+`;

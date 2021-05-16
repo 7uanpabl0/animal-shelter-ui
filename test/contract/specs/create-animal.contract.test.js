@@ -3,7 +3,7 @@ import { AnimalController } from "../../../controllers";
 import { Matchers } from "@pact-foundation/pact";
 
 describe('Given An Animal service', () => {
-    describe('When a request to create an animal is made', () => {
+    describe('Cuando se pide la creación de un animal', () => {
 
 
         var animal = {
@@ -25,7 +25,7 @@ describe('Given An Animal service', () => {
                 uponReceiving: 'a request to create an animal',
                 withRequest: {
 
-                    
+
                     method: 'POST',
                     path: '/animals',
                 
@@ -49,7 +49,7 @@ describe('Given An Animal service', () => {
             });
         });
 
-        it("Then it should return the right data", async() =>{
+        it("It should then return the data of the animal created correctly", async() =>{
             const response = await AnimalController.register(animal);
             expect(response.data).toMatchSnapshot();
             await provider.verify();

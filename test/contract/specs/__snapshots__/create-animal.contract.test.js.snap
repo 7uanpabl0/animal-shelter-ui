@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Given An Animal service Cuando se pide la creación de un animal It should then return the data of the animal created correctly 1`] = `
+Object {
+  "breed": "Catico",
+  "gender": "Male",
+  "isVaccinated": true,
+  "name": "Lucas",
+  "vaccines": Array [],
+}
+`;
+
 exports[`Given An Animal service When a request to create an animal is made Then it should return the right data 1`] = `
 Object {
   "breed": "Catico",

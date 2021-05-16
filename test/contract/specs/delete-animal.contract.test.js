@@ -2,14 +2,14 @@ import { provider } from '../config/initPact';
 import { AnimalController } from '../../../controllers';
 import { Matchers } from '@pact-foundation/pact';
 
-const animal_name = 'prueba';
+const animal_name = 'Lucas';
 
 describe('Given an animal service', () => {
     beforeAll(async() => {
         await provider.setup();
     });
 
-    describe('When a request to delete an animal is made', () => {
+    describe('When an animal is requested to be removed', () => {
         beforeAll(async() => {
             await provider.addInteraction({
                 state: 'backend service is up',
@@ -27,7 +27,7 @@ describe('Given an animal service', () => {
             });
         });
 
-        test('Then it should return message confirming the animal deleted', async() => {
+        test('It should then return a confirmation message about the deleted animal', async() => {
             const response = await AnimalController.delete(animal_name);
             expect(response.data).toMatchSnapshot();
 
