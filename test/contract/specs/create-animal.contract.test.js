@@ -1,4 +1,4 @@
-import { provider } from "./init-pact";
+import { provider } from '../config/initPact';
 import { AnimalController } from "../../../controllers";
 import { Matchers } from "@pact-foundation/pact";
 
@@ -7,12 +7,15 @@ describe('Given An Animal service', () => {
 
 
         var animal = {
-            name:"Lucas",
-            breed:"Beagle",
-            gender:"Male",
-            vaccinated:true
-        }
+            'name':'Lucas',
+            'breed':'Catico',
+            'gender':'Male',
+            'isVaccinated':true,
+            'vaccines': []}
 
+
+        
+        
 
 
         beforeAll(async () => {
@@ -22,13 +25,10 @@ describe('Given An Animal service', () => {
                 uponReceiving: 'a request to create an animal',
                 withRequest: {
 
+                    
                     method: 'POST',
                     path: '/animals',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-
-
+                
                     body: animal
                     /* Matchers.eachLike({
                         name: Matchers.string('Lucas'),
