@@ -1,4 +1,4 @@
-import {Pact} from '@pact-foundation/pact';
+import { Pact } from '@pact-foundation/pact';
 import path from 'path';
 
 const consumerName = 'AnimalShelterFront';
