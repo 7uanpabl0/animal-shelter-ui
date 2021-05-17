@@ -9,13 +9,3 @@ Object {
   "vaccines": Array [],
 }
 `;
-
-exports[`Given An Animal service When a request to create an animal is made Then it should return the right data 1`] = `
-Object {
-  "breed": "Catico",
-  "gender": "Male",
-  "isVaccinated": true,
-  "name": "Lucas",
-  "vaccines": Array [],
-}
-`;

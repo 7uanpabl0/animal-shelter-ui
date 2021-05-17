@@ -12,7 +12,7 @@ describe('Given an animal service', () => {
     describe('When an animal is requested to be removed', () => {
         beforeAll(async() => {
             await provider.addInteraction({
-                state: 'backend service is up',
+                state: 'deleting an animal',
                 uponReceiving: 'a request to delete an animal',
                 withRequest: {
                     method: 'DELETE',
